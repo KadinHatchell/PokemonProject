@@ -1,6 +1,8 @@
 package poke.model;
 
-public class Raichu
+import poke.controller.PokemonController;
+
+public class Raichu extends Pokemon implements Electric
 {
 	public Raichu()
 	{
@@ -9,7 +11,12 @@ public class Raichu
 	
 	public Raichu(String name)
 	{
-		super(name, 26)
+		super(name, 26);
+	}
+	
+	public Raichu(String name, int number)
+	{
+		super(name, number);
 	}
 	
 	public int staticZap()

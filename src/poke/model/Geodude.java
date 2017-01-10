@@ -1,5 +1,7 @@
 package poke.model;
 
+import poke.controller.PokemonController;
+
 public class Geodude extends Pokemon implements Rock
 {
 	
@@ -17,6 +19,7 @@ public class Geodude extends Pokemon implements Rock
 	{
 		super(name, number);
 	}
+	
 	
 	public int rockTomb()
 	{

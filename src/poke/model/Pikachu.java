@@ -1,6 +1,6 @@
 package poke.model;
 
-import poke.controller.PokeController;
+import poke.controller.PokemonController;
 
 public class Pikachu extends Pokemon implements Electric
 {

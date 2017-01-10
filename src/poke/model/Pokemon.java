@@ -13,29 +13,10 @@ public abstract class Pokemon
 		this.name = name;
 		this.number = number;
 	}
-	public void setName(String name)
-	{
-
-	}
-
-	public void setAttackPoints(int combat)
-	{
-	
-	}
-
-	public void setSpeed(double speed)
-	{
-		
-	}
-	
-	public void setHealthPoints(int health)
-	{
-		
-	}
 	
 	public String getPokemonTypes()
 	{
-		String pokemonTypes = "This Pokemon has the following types:\n";
+		String pokemonTypes = "";
 		Class<?> [] types = getClass().getInterfaces();
 		String [] pokeTypes = new String[types.length];
 		for(int index = 0; index < types.length; index++)
@@ -45,19 +26,72 @@ public abstract class Pokemon
 			pokeTypes[index] = temp;
 		}
 		
-		for(String current : pokeTypes)
+		for (String current : pokeTypes)
 		{
 			String temp = current.replace(this.getClass().getPackage().getName() + ".", "");
 			pokemonTypes += temp + "\n";
 		}
+		
 		return pokemonTypes;
+	}
+	
+	public String toString()
+	{
+		String description = "This is a pokemon.";
+		
+		return description;
 	}
 	
 	public String getPokemonInformation()
 	{
-		String pokemonInfo = "This pokemon is of type: " + this.getClass().getSimpleName();
+		String pokemonInfo = "This pokemons starting name is: " + this.getClass().getSimpleName();
 		
 		return pokemonInfo;
+	}
+	
+	public int getHealthPoints()
+	{
+		return healthPoints;
+	}
+
+	public void setHealthPoints(int healthPoints)
+	{
+		this.healthPoints = healthPoints;
+	}
+
+	public int getAttackPoints()
+	{
+		return attackPoints;
+	}
+
+	public void setAttackPoints(int attackPoints)
+	{
+		this.attackPoints = attackPoints;
+	}
+
+	public double getSpeed()
+	{
+		return speed;
+	}
+
+	public void setSpeed(double speed)
+	{
+		this.speed = speed;
+	}
+
+	public String getName()
+	{
+		return name;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public int getNumber()
+	{
+		return number;
 	}
 	
 
